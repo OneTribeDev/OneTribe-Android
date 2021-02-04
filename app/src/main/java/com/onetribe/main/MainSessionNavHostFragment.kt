@@ -1,10 +1,8 @@
-package com.onetribe
+package com.onetribe.main
 
 import android.app.Activity
 import android.webkit.WebView
 import androidx.fragment.app.Fragment
-import dev.hotwire.turbo.BuildConfig
-import dev.hotwire.turbo.config.TurboPathConfiguration
 import com.onetribe.features.imageviewer.ImageViewerFragment
 import com.onetribe.features.numbers.NumberBottomSheetFragment
 import com.onetribe.features.numbers.NumbersFragment
@@ -14,6 +12,8 @@ import com.onetribe.features.web.WebHomeFragment
 import com.onetribe.features.web.WebModalFragment
 import com.onetribe.util.HOME_URL
 import com.onetribe.util.initDayNightTheme
+import dev.hotwire.turbo.BuildConfig
+import dev.hotwire.turbo.config.TurboPathConfiguration
 import dev.hotwire.turbo.session.TurboSessionNavHostFragment
 import kotlin.reflect.KClass
 
@@ -39,9 +39,9 @@ class MainSessionNavHostFragment : TurboSessionNavHostFragment() {
 
     override val pathConfigurationLocation: TurboPathConfiguration.Location
         get() = TurboPathConfiguration.Location(
-            assetFilePath = "json/configuration.json",
-            remoteFileUrl = "https://turbo.hotwire.dev/demo/configurations/android-v1.json"
+            assetFilePath = "json/configuration.json"
         )
+    //    remoteFileUrl = "https://turbo.hotwire.dev/demo/configurations/android-v1.json"
     override fun onSessionCreated() {
         super.onSessionCreated()
         session.webView.settings.userAgentString = customUserAgent(session.webView)
@@ -56,4 +56,3 @@ class MainSessionNavHostFragment : TurboSessionNavHostFragment() {
         return "Turbo Native Android ${webView.settings.userAgentString}"
     }
 }
-

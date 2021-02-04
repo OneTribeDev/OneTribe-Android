@@ -1,7 +1,7 @@
-package com.onetribe
+package com.onetribe.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import dev.hotwire.turbo.activities.TurboActivity
 import dev.hotwire.turbo.delegates.TurboActivityDelegate
 import com.onetribe.R
@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity(), TurboActivity {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        delegate = TurboActivityDelegate(this, R.id.main_nav_host)
+        delegate = TurboActivityDelegate(
+            this,
+            R.id.main_nav_host
+        )
     }
 }
