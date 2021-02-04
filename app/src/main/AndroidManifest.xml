@@ -14,7 +14,7 @@
         android:theme="@style/MyTheme.DayNight"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="P">
-        <activity android:name=".MainActivity" android:label="@string/app_name" android:launchMode="singleTask" android:theme="@style/MyTheme.DayNight" android:windowSoftInputMode="adjustResize">
+        <activity android:name=".main.MainActivity" android:label="@string/app_name" android:launchMode="singleTask" android:theme="@style/MyTheme.DayNight" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
